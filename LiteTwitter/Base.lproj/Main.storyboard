@@ -83,6 +83,11 @@
                                 <action selector="addNewTweet:" destination="gpu-7H-WhR" id="9oX-lM-Wbx"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="eV4-KF-fM9">
+                            <connections>
+                                <action selector="onLogout:" destination="gpu-7H-WhR" id="sje-h6-Y7C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fU-Qf-d6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,13 +221,71 @@
             </objects>
             <point key="canvasLocation" x="3695.1999999999998" y="205.54722638680661"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="3dU-7L-H66">
+            <objects>
+                <viewController storyboardIdentifier="loginScreen" id="8lR-9N-Oon" customClass="LoginViewController" customModule="LiteTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQd-vj-yKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-gJ-wD8" customClass="TWTRLogInButton">
+                                <rect key="frame" x="164" y="328.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-Bo-ndr">
+                                <rect key="frame" x="67.5" y="260" width="239" height="30"/>
+                                <state key="normal" title="Custom Login(I don't, how it work)."/>
+                                <connections>
+                                    <action selector="LoginwithBrouser:" destination="8lR-9N-Oon" eventType="touchUpInside" id="Fvj-Qh-LO1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYy-XF-gay">
+                                <rect key="frame" x="16" y="62" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-YC-sl8">
+                                <rect key="frame" x="16" y="119" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gYy-XF-gay" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="9aO-vT-UkQ"/>
+                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="N7s-ev-sEn"/>
+                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="top" secondItem="JFJ-Bo-ndr" secondAttribute="bottom" constant="38.5" id="NIO-iC-auQ"/>
+                            <constraint firstItem="gYy-XF-gay" firstAttribute="leading" secondItem="A7P-M0-N3d" secondAttribute="leading" constant="16" id="P7u-UI-E5q"/>
+                            <constraint firstItem="gYy-XF-gay" firstAttribute="top" secondItem="A7P-M0-N3d" secondAttribute="top" constant="42" id="RPh-DI-gnM"/>
+                            <constraint firstItem="6zR-YC-sl8" firstAttribute="leading" secondItem="A7P-M0-N3d" secondAttribute="leading" constant="16" id="RhN-jl-Q4X"/>
+                            <constraint firstItem="JFJ-Bo-ndr" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="Ynf-dw-kt2"/>
+                            <constraint firstItem="6zR-YC-sl8" firstAttribute="top" secondItem="gYy-XF-gay" secondAttribute="bottom" constant="27" id="f4T-FY-yOb"/>
+                            <constraint firstItem="6zR-YC-sl8" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="jO8-b9-qy9"/>
+                            <constraint firstItem="A7P-M0-N3d" firstAttribute="trailing" secondItem="gYy-XF-gay" secondAttribute="trailing" constant="16" id="lcR-1f-E9U"/>
+                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="centerY" secondItem="A7P-M0-N3d" secondAttribute="centerY" id="ocS-s5-Irr"/>
+                            <constraint firstItem="A7P-M0-N3d" firstAttribute="trailing" secondItem="6zR-YC-sl8" secondAttribute="trailing" constant="16" id="z8C-kK-u1e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A7P-M0-N3d"/>
+                    </view>
+                    <connections>
+                        <segue destination="nZT-FI-wgu" kind="show" identifier="loginSucces" id="gke-xD-t9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIn-XG-uV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257" y="72"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xiv-aD-icb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nZT-FI-wgu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainView" automaticallyAdjustsScrollViewInsets="NO" id="nZT-FI-wgu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="H5M-ML-LFI"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XnX-q5-vSW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -233,7 +296,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doZ-S0-gFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269.60000000000002" y="65.217391304347828"/>
+            <point key="canvasLocation" x="-278" y="80"/>
         </scene>
         <!--Favorite Tweet Table View Controller-->
         <scene sceneID="NuE-tJ-WeU">

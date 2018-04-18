@@ -21,6 +21,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TWTRTwitter.sharedInstance().start(withConsumerKey:"d1eKhHi8ZZm3V0oYjSlE6qHyw", consumerSecret:"ZkZQcrEFYaR4Qw5wuVX5EDAE8Fr4zMwLQwafGEyiiKhWEDPyxs")
         
         
+        
+        
+        //Not login mainView
+        if !(TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers()) {
+            
+            let loginViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+            
+            let frame = UIScreen.main.bounds
+            window = UIWindow(frame: frame)
+            
+            window?.rootViewController = loginViewController
+            
+            window?.makeKeyAndVisible()
+            
+        } else {
+            let loginViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainView")
+            window?.rootViewController = loginViewController
+        }
+        
+        
         return true
     }
 

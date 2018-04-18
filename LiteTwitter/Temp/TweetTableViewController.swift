@@ -24,6 +24,15 @@ class TweetTableViewController: UITableViewController {
     
   //  var tweetViews = [TWTRTweetView]()
     
+    
+    @IBAction func onLogout(_ sender: Any) {
+        let story = TWTRTwitter.sharedInstance().sessionStore
+        if let userID = story.session()?.userID {
+            story.logOutUserID(userID)
+        }
+    }
+    
+    
     @IBAction func addNewTweet(_ sender: UIBarButtonItem) {
         
         if (TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers()) {

@@ -12,6 +12,7 @@
 		3250719D2086145B00A9B46D /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250719C2086145B00A9B46D /* TweetTableViewCell.swift */; };
 		325071A12086349F00A9B46D /* FavoriteTweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325071A02086349F00A9B46D /* FavoriteTweetTableViewController.swift */; };
 		325071A32086376D00A9B46D /* FavoriteTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325071A22086376D00A9B46D /* FavoriteTweetTableViewCell.swift */; };
+		3275826B20872EF300A82873 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3275826A20872EF300A82873 /* LoginViewController.swift */; };
 		32E68C982085D60500E2F8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E68C972085D60500E2F8FF /* AppDelegate.swift */; };
 		32E68C9D2085D60500E2F8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E68C9B2085D60500E2F8FF /* Main.storyboard */; };
 		32E68CA02085D60500E2F8FF /* LiteTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32E68C9E2085D60500E2F8FF /* LiteTwitter.xcdatamodeld */; };
@@ -51,6 +52,7 @@
 		3250719C2086145B00A9B46D /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		325071A02086349F00A9B46D /* FavoriteTweetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTweetTableViewController.swift; sourceTree = "<group>"; };
 		325071A22086376D00A9B46D /* FavoriteTweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTweetTableViewCell.swift; sourceTree = "<group>"; };
+		3275826A20872EF300A82873 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		32E68C942085D60500E2F8FF /* LiteTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E68C972085D60500E2F8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32E68C9C2085D60500E2F8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				325071A22086376D00A9B46D /* FavoriteTweetTableViewCell.swift */,
 				32E68CC82085D6CC00E2F8FF /* TweetTableViewController.swift */,
 				325071A02086349F00A9B46D /* FavoriteTweetTableViewController.swift */,
+				3275826A20872EF300A82873 /* LoginViewController.swift */,
 			);
 			path = Temp;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3275826B20872EF300A82873 /* LoginViewController.swift in Sources */,
 				3250719620860CBD00A9B46D /* TweetCollectionViewCell.swift in Sources */,
 				32E68CC92085D6CC00E2F8FF /* TweetTableViewController.swift in Sources */,
 				32E68C982085D60500E2F8FF /* AppDelegate.swift in Sources */,
