@@ -36,13 +36,23 @@ class LoginViewController: UIViewController {
 //            }
 //        })
         
-        TWTRTwitter.sharedInstance().logIn(with: self) { session, error in
+//        TWTRTwitter.sharedInstance().logIn(with: self) { session, error in
+//            guard let _ = session else {
+//                print("boo")
+//                return
+//            }
+//
+//            print(session?.authToken ?? "")
+//        }
+        
+        
+        TWTRTwitter.sharedInstance().logIn { session, error in
             guard let _ = session else {
-                print("boo")
+                print("no login")
                 return
             }
-
-            print(session?.authToken ?? "")
+            
+           self.performSegue(withIdentifier: "loginSucces", sender: nil)
         }
     }
     

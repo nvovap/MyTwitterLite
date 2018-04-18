@@ -8,6 +8,7 @@
 
 import XCTest
 
+
 class LiteTwitterUITests: XCTestCase {
         
     override func setUp() {
@@ -29,8 +30,24 @@ class LiteTwitterUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+
+        
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"The Birds Nest")/*[[".cells.containing(.staticText, identifier:\"17 апреля 2018 г.\")",".cells.containing(.staticText, identifier:\"@Bmore_BirdsNest\")",".cells.containing(.staticText, identifier:\"The Birds Nest\")"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Add to favorite"].tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Favorites"].tap()
+        
+        
+
+        tabBarsQuery.buttons["More"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"The Birds Nest")/*[[".cells.containing(.staticText, identifier:\"17 апреля 2018 г.\")",".cells.containing(.staticText, identifier:\"@Bmore_BirdsNest\")",".cells.containing(.staticText, identifier:\"The Birds Nest\")"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*//*@START_MENU_TOKEN@*/.buttons["Delete from favorite"]/*[[".cells.buttons[\"Delete from favorite\"]",".buttons[\"Delete from favorite\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        
+                
     }
     
 }

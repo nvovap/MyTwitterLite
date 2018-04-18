@@ -34,12 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = loginViewController
             
             window?.makeKeyAndVisible()
-            
-        } else {
-            let loginViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainView")
-            window?.rootViewController = loginViewController
         }
-        
         
         return true
     }

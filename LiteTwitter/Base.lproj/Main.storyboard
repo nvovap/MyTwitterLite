@@ -78,21 +78,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oXD-dc-N8f">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="vFK-f3-s03">
-                            <connections>
-                                <action selector="addNewTweet:" destination="gpu-7H-WhR" id="9oX-lM-Wbx"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="eV4-KF-fM9">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="eV4-KF-fM9">
                             <connections>
                                 <action selector="onLogout:" destination="gpu-7H-WhR" id="sje-h6-Y7C"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vFK-f3-s03">
+                            <connections>
+                                <action selector="addNewTweet:" destination="gpu-7H-WhR" id="9oX-lM-Wbx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fU-Qf-d6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.8" y="65.217391304347828"/>
+            <point key="canvasLocation" x="1534" y="80"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Gxc-Os-1nk">
@@ -229,44 +229,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-gJ-wD8" customClass="TWTRLogInButton">
-                                <rect key="frame" x="164" y="328.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-Bo-ndr">
-                                <rect key="frame" x="67.5" y="260" width="239" height="30"/>
-                                <state key="normal" title="Custom Login(I don't, how it work)."/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-Bo-ndr">
+                                <rect key="frame" x="86" y="310" width="203" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="OsJ-Lu-SFE"/>
+                                    <constraint firstAttribute="height" constant="46" id="QiK-US-qNm"/>
+                                </constraints>
+                                <state key="normal" image="b" backgroundImage=" "/>
                                 <connections>
                                     <action selector="LoginwithBrouser:" destination="8lR-9N-Oon" eventType="touchUpInside" id="Fvj-Qh-LO1"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYy-XF-gay">
-                                <rect key="frame" x="16" y="62" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-YC-sl8">
-                                <rect key="frame" x="16" y="119" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gYy-XF-gay" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="9aO-vT-UkQ"/>
-                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="N7s-ev-sEn"/>
-                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="top" secondItem="JFJ-Bo-ndr" secondAttribute="bottom" constant="38.5" id="NIO-iC-auQ"/>
-                            <constraint firstItem="gYy-XF-gay" firstAttribute="leading" secondItem="A7P-M0-N3d" secondAttribute="leading" constant="16" id="P7u-UI-E5q"/>
-                            <constraint firstItem="gYy-XF-gay" firstAttribute="top" secondItem="A7P-M0-N3d" secondAttribute="top" constant="42" id="RPh-DI-gnM"/>
-                            <constraint firstItem="6zR-YC-sl8" firstAttribute="leading" secondItem="A7P-M0-N3d" secondAttribute="leading" constant="16" id="RhN-jl-Q4X"/>
+                            <constraint firstItem="JFJ-Bo-ndr" firstAttribute="centerY" secondItem="A7P-M0-N3d" secondAttribute="centerY" id="N93-qH-hgc"/>
                             <constraint firstItem="JFJ-Bo-ndr" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="Ynf-dw-kt2"/>
-                            <constraint firstItem="6zR-YC-sl8" firstAttribute="top" secondItem="gYy-XF-gay" secondAttribute="bottom" constant="27" id="f4T-FY-yOb"/>
-                            <constraint firstItem="6zR-YC-sl8" firstAttribute="centerX" secondItem="A7P-M0-N3d" secondAttribute="centerX" id="jO8-b9-qy9"/>
-                            <constraint firstItem="A7P-M0-N3d" firstAttribute="trailing" secondItem="gYy-XF-gay" secondAttribute="trailing" constant="16" id="lcR-1f-E9U"/>
-                            <constraint firstItem="IcJ-gJ-wD8" firstAttribute="centerY" secondItem="A7P-M0-N3d" secondAttribute="centerY" id="ocS-s5-Irr"/>
-                            <constraint firstItem="A7P-M0-N3d" firstAttribute="trailing" secondItem="6zR-YC-sl8" secondAttribute="trailing" constant="16" id="z8C-kK-u1e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A7P-M0-N3d"/>
                     </view>
@@ -276,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIn-XG-uV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1257" y="72"/>
+            <point key="canvasLocation" x="-1122" y="80"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xiv-aD-icb">
@@ -341,7 +319,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URG-sJ-dtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682" y="840"/>
+            <point key="canvasLocation" x="670" y="858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pDN-et-0Yf">
@@ -360,7 +338,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hy7-nF-T9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="65.217391304347828"/>
+            <point key="canvasLocation" x="670" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" " width="16" height="16"/>
+        <image name="b" width="358" height="78"/>
+    </resources>
 </document>
